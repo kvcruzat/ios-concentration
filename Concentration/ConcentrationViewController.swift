@@ -13,7 +13,7 @@ class ConcentrationViewController: UIViewController {
     private lazy var game: Concentration = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
     var numberOfPairsOfCards: Int {
-        return (cardButtons.count + 1) / 2
+        return (visibleCardButtons.count + 1) / 2
     }
     
     @IBOutlet private weak var flipCountLabel: UILabel!
@@ -22,10 +22,20 @@ class ConcentrationViewController: UIViewController {
 //            loadEmoji()
         }
     }
+    
+    private var visibleCardButtons: [UIButton]! {
+        return cardButtons?.filter { !$0.superview!.isHidden }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateViewFromModel()
+    }
+    
     @IBOutlet private weak var scoreLabel: UILabel!
     
     @IBAction func touchCard(_ sender: UIButton) {
-        if let cardNumber = cardButtons.index(of: sender){
+        if let cardNumber = visibleCardButtons.index(of: sender){
             if !game.cards[cardNumber].isFaceUp {
                 game.chooseCard(at: cardNumber)
                 updateViewFromModel()
@@ -44,9 +54,9 @@ class ConcentrationViewController: UIViewController {
     }
     
     func updateViewFromModel(){
-        if cardButtons != nil {
-            for index in cardButtons.indices {
-                let button = cardButtons[index]
+        if visibleCardButtons != nil {
+            for index in visibleCardButtons.indices {
+                let button = visibleCardButtons[index]
                 let card = game.cards[index]
                 if card.isFaceUp {
                     print("flip \(index)")
@@ -57,7 +67,8 @@ class ConcentrationViewController: UIViewController {
                     button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.6910327673, green: 0.6910327673, blue: 0.6910327673, alpha: 0) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
                 }
             }
-            scoreLabel.text = "Score: \(game.score)"
+            let scoreText = traitCollection.verticalSizeClass == .compact ? "Score\n\(game.score)" : "Score: \(game.score)"
+            scoreLabel.text = scoreText
             flipCountLabel.text = "Flips: \(game.flips) "
         }
         
