@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C32ADDFB1FE48E4F0091B016 /* ThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32ADDFA1FE48E4F0091B016 /* ThemeChooserViewController.swift */; };
+		C3B346851FFC18920061B728 /* CardBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3467E1FFC18910061B728 /* CardBehaviour.swift */; };
+		C3B346861FFC18920061B728 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B3467F1FFC18910061B728 /* CardView.swift */; };
+		C3B346871FFC18920061B728 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B346801FFC18910061B728 /* Grid.swift */; };
+		C3B346881FFC18920061B728 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B346811FFC18910061B728 /* SetViewController.swift */; };
+		C3B346891FFC18920061B728 /* SetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B346821FFC18920061B728 /* SetCard.swift */; };
+		C3B3468A1FFC18920061B728 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B346831FFC18920061B728 /* ShapesView.swift */; };
+		C3B3468B1FFC18920061B728 /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B346841FFC18920061B728 /* Set.swift */; };
 		C3E6817B1FDAF41A00CE032C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6817A1FDAF41A00CE032C /* AppDelegate.swift */; };
 		C3E6817D1FDAF41A00CE032C /* ConcentrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E6817C1FDAF41A00CE032C /* ConcentrationViewController.swift */; };
 		C3E681801FDAF41A00CE032C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E6817E1FDAF41A00CE032C /* Main.storyboard */; };
@@ -20,6 +27,13 @@
 
 /* Begin PBXFileReference section */
 		C32ADDFA1FE48E4F0091B016 /* ThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChooserViewController.swift; sourceTree = "<group>"; };
+		C3B3467E1FFC18910061B728 /* CardBehaviour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBehaviour.swift; sourceTree = "<group>"; };
+		C3B3467F1FFC18910061B728 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C3B346801FFC18910061B728 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		C3B346811FFC18910061B728 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		C3B346821FFC18920061B728 /* SetCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCard.swift; sourceTree = "<group>"; };
+		C3B346831FFC18920061B728 /* ShapesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
+		C3B346841FFC18920061B728 /* Set.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = "<group>"; };
 		C3E681771FDAF41A00CE032C /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E6817A1FDAF41A00CE032C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3E6817C1FDAF41A00CE032C /* ConcentrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +84,13 @@
 				C3E6818F1FDAFB2000CE032C /* Concentration.swift */,
 				C3E6817E1FDAF41A00CE032C /* Main.storyboard */,
 				C32ADDFA1FE48E4F0091B016 /* ThemeChooserViewController.swift */,
+				C3B3467E1FFC18910061B728 /* CardBehaviour.swift */,
+				C3B3467F1FFC18910061B728 /* CardView.swift */,
+				C3B346801FFC18910061B728 /* Grid.swift */,
+				C3B346841FFC18920061B728 /* Set.swift */,
+				C3B346821FFC18920061B728 /* SetCard.swift */,
+				C3B346811FFC18910061B728 /* SetViewController.swift */,
+				C3B346831FFC18920061B728 /* ShapesView.swift */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
@@ -157,11 +178,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B346891FFC18920061B728 /* SetCard.swift in Sources */,
+				C3B346861FFC18920061B728 /* CardView.swift in Sources */,
+				C3B3468A1FFC18920061B728 /* ShapesView.swift in Sources */,
+				C3B346881FFC18920061B728 /* SetViewController.swift in Sources */,
 				C3E6817D1FDAF41A00CE032C /* ConcentrationViewController.swift in Sources */,
 				C3E6817B1FDAF41A00CE032C /* AppDelegate.swift in Sources */,
+				C3B346871FFC18920061B728 /* Grid.swift in Sources */,
 				C3E681901FDAFB2000CE032C /* Concentration.swift in Sources */,
+				C3B3468B1FFC18920061B728 /* Set.swift in Sources */,
 				C32ADDFB1FE48E4F0091B016 /* ThemeChooserViewController.swift in Sources */,
 				C3E681921FDAFB6B00CE032C /* Card.swift in Sources */,
+				C3B346851FFC18920061B728 /* CardBehaviour.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

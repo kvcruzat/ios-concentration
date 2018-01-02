@@ -495,38 +495,6 @@
             </objects>
             <point key="canvasLocation" x="-1878" y="861"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="60U-Z0-t9L">
-            <objects>
-                <viewController id="ErN-Xg-LH6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FfP-qF-mPc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="jXF-TR-f39"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="6Ce-vO-ewN"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gK5-jf-Gkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1516" y="2154"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="7i6-Rg-KV0">
-            <objects>
-                <viewController id="xMj-Rb-kPe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zya-p8-p8A">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="243-sx-maK"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="L56-Cf-9nm"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gji-Xs-p11" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1516" y="1513"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uBy-6e-jwu">
             <objects>
@@ -538,13 +506,111 @@
                     </tabBar>
                     <connections>
                         <segue destination="9R2-TG-q3C" kind="relationship" relationship="viewControllers" id="KgI-oE-ghx"/>
-                        <segue destination="xMj-Rb-kPe" kind="relationship" relationship="viewControllers" id="WLg-qO-reD"/>
-                        <segue destination="ErN-Xg-LH6" kind="relationship" relationship="viewControllers" id="tix-30-bVE"/>
+                        <segue destination="XFU-fv-J60" kind="relationship" relationship="viewControllers" id="TZp-ak-gs2"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgg-85-85X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2683" y="1378"/>
+        </scene>
+        <!--Set-->
+        <scene sceneID="TXD-4C-UE7">
+            <objects>
+                <viewController id="XFU-fv-J60" customClass="SetViewController" customModule="Set" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jmc-gZ-hGC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9T-yP-foV">
+                                <rect key="frame" x="10" y="44" width="355" height="591.66666666666663"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcs-tp-6fu">
+                                <rect key="frame" x="154" y="687.66666666666663" width="67.666666666666686" height="21.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTR-Zl-glG">
+                                <rect key="frame" x="10" y="683.66666666666663" width="75" height="30"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGame:" destination="XFU-fv-J60" eventType="touchUpInside" id="hWn-t6-2Z5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxz-hP-fvg">
+                                <rect key="frame" x="30" y="644" width="142.66666666666666" height="36"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Deal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dealCards:" destination="XFU-fv-J60" eventType="touchUpInside" id="5Ln-FT-qn2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 Sets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlL-TD-JjD">
+                                <rect key="frame" x="202.66666666666663" y="644" width="142.33333333333337" height="36"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi-Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjD-Zg-aid">
+                                <rect key="frame" x="285.66666666666669" y="690" width="78.333333333333314" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xcs-tp-6fu" firstAttribute="top" secondItem="Jxz-hP-fvg" secondAttribute="bottom" constant="8" symbolic="YES" id="8dZ-dP-J37"/>
+                            <constraint firstItem="CjD-Zg-aid" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jmc-gZ-hGC" secondAttribute="leading" constant="20" symbolic="YES" id="Ci3-m8-nAp"/>
+                            <constraint firstItem="CjD-Zg-aid" firstAttribute="centerY" secondItem="Xcs-tp-6fu" secondAttribute="centerY" id="D4e-0p-d8c"/>
+                            <constraint firstItem="CTR-Zl-glG" firstAttribute="leading" secondItem="WJY-2Y-PGu" secondAttribute="leading" constant="10" id="FUa-ch-7xL"/>
+                            <constraint firstItem="Jxz-hP-fvg" firstAttribute="leading" secondItem="WJY-2Y-PGu" secondAttribute="leading" constant="30" id="P0X-OH-bQV"/>
+                            <constraint firstItem="qlL-TD-JjD" firstAttribute="leading" secondItem="Jxz-hP-fvg" secondAttribute="trailing" constant="30" id="PeI-sW-I7b"/>
+                            <constraint firstItem="WJY-2Y-PGu" firstAttribute="trailing" secondItem="CjD-Zg-aid" secondAttribute="trailing" constant="11" id="SbA-sd-mmm"/>
+                            <constraint firstItem="WJY-2Y-PGu" firstAttribute="trailing" secondItem="qlL-TD-JjD" secondAttribute="trailing" constant="30" id="Tb9-Hr-xSs"/>
+                            <constraint firstItem="WJY-2Y-PGu" firstAttribute="trailing" secondItem="G9T-yP-foV" secondAttribute="trailing" constant="10" id="XSg-DZ-4Ej"/>
+                            <constraint firstItem="Xcs-tp-6fu" firstAttribute="top" secondItem="qlL-TD-JjD" secondAttribute="bottom" constant="8" symbolic="YES" id="aLB-lD-QMv"/>
+                            <constraint firstItem="Jxz-hP-fvg" firstAttribute="width" secondItem="qlL-TD-JjD" secondAttribute="width" id="aRt-o9-58S"/>
+                            <constraint firstItem="G9T-yP-foV" firstAttribute="leading" secondItem="WJY-2Y-PGu" secondAttribute="leading" constant="10" id="bUb-fy-TBu"/>
+                            <constraint firstItem="Jxz-hP-fvg" firstAttribute="top" secondItem="G9T-yP-foV" secondAttribute="bottom" constant="8" symbolic="YES" id="bt1-Na-qNy"/>
+                            <constraint firstItem="CTR-Zl-glG" firstAttribute="centerY" secondItem="Xcs-tp-6fu" secondAttribute="centerY" id="ePo-Rp-ZVD"/>
+                            <constraint firstItem="G9T-yP-foV" firstAttribute="top" secondItem="WJY-2Y-PGu" secondAttribute="top" id="faX-z3-WR1"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="CTR-Zl-glG" secondAttribute="trailing" constant="20" symbolic="YES" id="ly2-Zl-oii"/>
+                            <constraint firstItem="Jxz-hP-fvg" firstAttribute="height" secondItem="qlL-TD-JjD" secondAttribute="height" id="nFn-1O-ecr"/>
+                            <constraint firstItem="WJY-2Y-PGu" firstAttribute="bottom" secondItem="Xcs-tp-6fu" secondAttribute="bottom" constant="20" id="rCj-Vu-O8w"/>
+                            <constraint firstItem="Xcs-tp-6fu" firstAttribute="centerX" secondItem="WJY-2Y-PGu" secondAttribute="centerX" id="sYE-GS-QNf"/>
+                            <constraint firstItem="qlL-TD-JjD" firstAttribute="top" secondItem="G9T-yP-foV" secondAttribute="bottom" constant="8" symbolic="YES" id="uey-zT-7BQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WJY-2Y-PGu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Set" id="W4L-ET-pKQ"/>
+                    <connections>
+                        <outlet property="cardGrid" destination="G9T-yP-foV" id="L1g-v2-fWm"/>
+                        <outlet property="dealButton" destination="Jxz-hP-fvg" id="hjm-ik-2MH"/>
+                        <outlet property="hiScoreLabel" destination="CjD-Zg-aid" id="fz9-Vd-LC7"/>
+                        <outlet property="numberOfSetsLabel" destination="qlL-TD-JjD" id="Mnw-hE-NpH"/>
+                        <outlet property="scoreLabel" destination="Xcs-tp-6fu" id="pe2-dP-o14"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uDb-4o-itI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1788" y="1623"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
